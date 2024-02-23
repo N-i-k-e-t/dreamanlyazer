@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dall-E Webapp</title>
+    <link rel="stylesheet" type="text/css" href="/combinecode/test image/style.css">
+</head>
+
+<body>
+    <div  class="container">
+        <h1>Dream Interpreter</h1>
+            <fieldset>
+        <div>
+            <textarea id="text-prompt" rows="4" cols="52" title="Enter your prompt here">An isometric view of a miniature city, tilt shift, bokeh, voxel, vray render, high detail</textarea>
+        </div>
+
+        <div>
+            <div>
+                <label for="image-count">Image count (1-4):</label>
+                <input id="image-count" value="1" placeholder="Enter image count (1-4)">
+            </div>
+        </div>
+
+        <div>
+            <label for="radio-256">256</label>
+            <input type="radio" id="radio-256" name="image-size" value="256" checked>
+            <label for="256">256</label>
+        </div>
+        <div>
+            <label for="radio-512">512</label>
+            <input type="radio" id="radio-512" name="image-size" value="512">
+            <label for="512">512</label>
+        </div>
+        <div>
+            <label for="radio-1024">1024</label>
+            <input type="radio" id="radio-1024" name="image-size" value="1024">
+            <label for="1024">1024</label>
+        </div>
+        <br>
+
+        <div  class="button_container">
+            <button id="button-request">Analyze Dream</button>
+            <button id="speakButton">Speak Interpretation</button>
+        </div>
+    </fieldset>
+    </div>
+    <br>
+
+    <div class="container">
+        <fieldset>
+        <legend><h2>Dream Images Status</h2></legend>
+        <div>
+            <p id="request-status">No request performed yet</p>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Dream Images</h2></legend>
+
+        <!-- Response images will be added here -->
+        <div id="image-container"></div>
+
+    </fieldset>
+
+    </div>
+    
+    <script></script>
+    <script type="text/javascript" src="/combinecode/test image/script.js"></script>
+    <script>
+        // Set the default OpenAI API key
+        const apiKey = "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";
+    </script>
+</body>
+
+</html>
